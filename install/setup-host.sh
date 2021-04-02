@@ -6,7 +6,7 @@
 # install system dependencies
 apt-get update -y
 apt-get install -y python3 python3-pip python3-venv build-essential pwgen mysql-client
-pip3 install --upgrade pip wheel
+pip3 install --upgrade "pip < 19.2"
 
 # install docker
 curl -fsSL https://get.docker.com/ | sh
