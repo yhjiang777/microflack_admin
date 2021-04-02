@@ -17,7 +17,7 @@ for PACKAGE in $PACKAGES; do
     pushd ../microflack_$PACKAGE
     if [[ ! -f venv ]]; then
         python3 -m venv venv
-        venv/bin/pip install --upgrade pip
+        venv/bin/pip install --upgrade "pip < 19.2"
         venv/bin/pip install wheel
     fi
     ./mkwheel all

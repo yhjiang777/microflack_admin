@@ -3,7 +3,7 @@
 # This script performs a complete install on a single host. Intended for
 # development, staging and testing.
 
-GITROOT=https://github.com/miguelgrinberg
+GITROOT=https://github.com/yhjiang777
 pushd ~/
 
 # environment variables
