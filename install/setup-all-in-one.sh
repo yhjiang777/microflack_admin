@@ -7,7 +7,7 @@ GITROOT=https://github.com/yhjiang777
 pushd ~/
 
 # environment variables
-export HOST_IP_ADDRESS=$(ip route get 1 | awk '{print $NF;exit}')
+export HOST_IP_ADDRESS=$(ip route get 1 | awk '{for(i=1; i<NF; i++) if($i == "src") { print $((i+1)); break }}')
 export SECRET_KEY=$(pwgen -1 -c -n -s 32)
 export JWT_SECRET_KEY=$(pwgen -1 -c -n -s 32)
 export PATH=$PATH:$PWD/microflack_admin/bin

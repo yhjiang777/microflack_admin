@@ -13,8 +13,8 @@ exec su -c /tmp/setup-all-in-one.sh -l vagrant
 SCRIPT
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/xenial64"
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.network "private_network", ip: "192.168.56.10"
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1536"
   end
